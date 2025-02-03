@@ -17,6 +17,7 @@
         </el-radio-group>
       </div>
       <question-list v-model:question="question" :loading="loading" v-if="mode === 'ques'" />
+      <questionnaire-settings v-if="mode === 'setting'" />
     </div>
 
     <!--        <div class="flex justify-center items-center gap-160 mt-20">-->
@@ -116,6 +117,7 @@ import LeftMenu from "@/pages/DetailInfo/leftMenu.vue";
 import MenuPanel from "@/pages/DetailInfo/menuPanel.vue";
 import RightMenu from "@/pages/DetailInfo/rightMenu.vue";
 import QuestionList from "./questionList.vue";
+import QuestionnaireSettings from './QuestionnaireSettings.vue'
 
 const mode = ref("ques");
 const tempStore = useMainStore().useTempStore();
@@ -356,3 +358,4 @@ const submit = (state: number) => {
 }
 
 </style>
+
