@@ -18,6 +18,7 @@
       </div>
       <question-list v-model:question="question" :loading="loading" v-if="mode === 'ques'" />
       <questionnaire-settings v-if="mode === 'setting'" />
+
     </div>
 
     <!--        <div class="flex justify-center items-center gap-160 mt-20">-->
